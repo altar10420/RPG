@@ -1,0 +1,44 @@
+{% extends 'quests/stats.html' %}
+
+{% block quests_details %}
+
+
+<div class="col-md-8 order-md-1">
+          <h4 class="d-flex justify-content-between align-items-right mb-3">
+            <span class="text-muted">Quests in progress</span>
+          </h4>
+            <ul class="list-group mb-3">
+                {% if all_quests %}
+                {% for quest in all_quests %}
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <a href="{% url 'quests:quests' quest.id hero.id %}">{{ quest.title }}</a><br>
+                <small class="text-muted">{{ quest.short }}</small>
+              </div>
+              <span class="text-muted">5%</span>
+            </li>
+                {% endfor %}
+                {% endif %}
+
+
+          <br>
+
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Available quests</span>
+          </h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <a href="#" class="text-muted">Rescue a princess</a><br>
+                <small class="text-muted">Sleeping princess</small>
+              </div>
+              <span class="text-muted"></span>
+            </li>
+          </ul>
+
+            </ul>
+        </div>
+  </div>
+
+
+    {% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'quests/stats.html' %}
+
+{% block quests_details %}
+
+
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">{{ quest.title }}</span>
+          </h4>
+            <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <p>{{ quest.plot }}</p>
+                <small class="text-muted">{{ quest.footer }}</small>
+              </div>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <a href="{% url 'quests:levelup' quest.id hero.id %}" class="btn btn-success" role="button">Explore cave</a>
+                <a href="{% url 'quests:levelup' quest.id hero.id %}" class="btn btn-success" role="button">Make noise</a>
+                <a href="{% url 'quests:levelup' quest.id hero.id %}" class="btn btn-success" role="button">Look around</a>
+                <a href="{% url 'quests:levelup' quest.id hero.id %}" class="btn btn-danger" role="button">Leave</a>
+
+
+              </div>
+            </li>
+
+
+
+
+           </ul>
+
+
+    {% load staticfiles %}
+    {% endblock %}
+
+

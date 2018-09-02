@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Loads the path to your static files -->
+    {% load staticfiles %}
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>RPG main</title>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">RPG</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline mt-2 mt-md-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<br>    
+
+<div class="container">
+
+  <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+          <h3 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Wielki Dzik</span>
+            <img src="{% static "quests/images/orc.png" %}" class="rounded" alt="warrior" width="150" height="150">
+          </h3>
+          <h6 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Wojownik</span>
+            <span class="text-muted">Poziom 1</span>
+          </h6>
+          <h6 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Total EXP</span>
+            <span class="text-muted">360 (500)</span>
+          </h6>
+
+            <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div class="text-danger">
+                <h6 class="my-0"><strong>HP</strong></h6>
+                <small class="text-muted">You are in medium condition</small>
+              </div>
+              <span class="text-muted">50/89</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div class="text-primary">
+                <h6 class="my-0"><strong>MANA</strong></h6>
+                <small class="text-muted">Your mana is vey low</small>
+              </div>
+              <span class="text-danger">8/30</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">STR</h6>
+                <small class="text-muted">Adds from: sword, ring</small>
+              </div>
+              <span class="text-success">18/13</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between bg-light">
+              <div>
+                <h6 class="my-0">DEX</h6>
+                <small class="text-muted">No adds</small>
+              </div>
+              <span class="text">10</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between bg-light">
+              <div>
+                <h6 class="my-0">INT</h6>
+                <small class="text-muted">No adds</small>
+              </div>
+              <span class="text">12</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span><strong>Total condition</strong></span>
+              <strong>124</strong>
+            </li>
+          </ul>
+        </div>
+          
+
+
+        <div class="col-md-8 order-md-1">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Quests in progress</span>
+          </h4>
+            <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <a href="#">Goblins in village</a><br>
+                <small class="text-muted">Goblins in village</small>
+              </div>
+              <span class="text-muted">5%</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <a href="#">The sleeping Giant</a><br>
+                <small class="text-muted">The sleeping Giant</small>
+              </div>
+              <span class="text-muted">25%</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <a href="#">Lost children</a><br>
+                <small class="text-muted">Brief description</small>
+              </div>
+              <span class="text-muted">60%</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <a href="#">The Kings Sword</a><br>
+                <small class="text-muted">Long term quest</small>
+              </div>
+              <span class="text-muted">10%</span>
+            </li>
+
+          <br>
+
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Available quests</span>
+          </h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <a href="#" class="text-muted">Rescue a princess</a><br>
+                <small class="text-muted">Sleeping princess</small>
+              </div>
+              <span class="text-muted"></span>
+            </li>
+          </ul>
+
+            </ul>
+        </div>
+  </div>
+
+
+{% block body %}
+{% endblock %}
+
+  </body>
+</html>
